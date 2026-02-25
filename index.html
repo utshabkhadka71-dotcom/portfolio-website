@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Utshab | BCA 1st Sem • Future Ethical Hacker</title>
+  
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+    .terminal-font { font-family: 'VT323', monospace; }
+    .neon-green { 
+      color: #10b981; 
+      text-shadow: 0 0 8px #10b981, 0 0 16px #10b981; 
+    }
+    .bg-terminal { background: #0a0a0a; }
+    
+    .typing::after {
+      content: "|";
+      animation: blink 0.8s step-end infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 min-h-screen flex flex-col">
+
+  <!-- Fixed Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-zinc-900/90 backdrop-blur-md border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <!-- Logo / Name -->
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-emerald-600 flex items-center justify-center text-2xl font-bold">U</div>
+        <span class="text-2xl font-bold neon-green">UTSHAB</span>
+      </div>
+
+      <!-- Desktop links -->
+      <div class="hidden md:flex items-center gap-10 text-sm uppercase tracking-wider font-medium">
+        <a href="#about" class="hover:text-emerald-400 transition">About</a>
+        <a href="#skills" class="hover:text-emerald-400 transition">Skills</a>
+        <a href="#journey" class="hover:text-emerald-400 transition">Journey</a>
+        <a href="#projects" class="hover:text-emerald-400 transition">Projects</a>
+        <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
+      </div>
+
+      <!-- Social icons (desktop) -->
+      <div class="hidden md:flex items-center gap-6">
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="text-2xl hover:text-emerald-400 transition">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="text-2xl hover:text-emerald-400 transition">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/" target="_blank" rel="noopener noreferrer" class="text-2xl hover:text-emerald-400 transition">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button id="menu-btn" class="md:hidden text-3xl text-emerald-400">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-t border-zinc-800 py-6">
+      <div class="flex flex-col items-center gap-6 text-lg">
+        <a href="#about" class="hover:text-emerald-400">About</a>
+        <a href="#skills" class="hover:text-emerald-400">Skills</a>
+        <a href="#journey" class="hover:text-emerald-400">Journey</a>
+        <a href="#projects" class="hover:text-emerald-400">Projects</a>
+        <a href="#contact" class="hover:text-emerald-400">Contact</a>
+        
+        <div class="flex gap-10 pt-4 text-3xl">
+          <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="flex-1 flex items-center justify-center pt-24 pb-16 px-6 bg-gradient-to-b from-zinc-950 via-zinc-900 to-black">
+    <div class="max-w-4xl text-center">
+      <div class="inline-block px-5 py-2 mb-6 bg-emerald-950/50 border border-emerald-700/50 rounded-full text-emerald-400 text-sm font-mono">
+        BCA 1st Semester • Butwal, Nepal
+      </div>
+      
+      <h1 class="text-5xl md:text-7xl font-bold mb-4">
+        Hi, I'm <span class="neon-green">Utshab</span>
+      </h1>
+      
+      <p id="typing" class="typing text-3xl md:text-5xl font-medium terminal-font text-emerald-300 h-16 md:h-20"></p>
+      
+      <p class="mt-8 text-xl md:text-2xl text-zinc-400 max-w-2xl mx-auto">
+        Learning web development right now •<br class="hidden sm:block"/>
+        dreaming of becoming an <span class="text-emerald-400 font-semibold">ethical hacker</span> & cybersecurity professional
+      </p>
+
+      <div class="mt-12 flex flex-col sm:flex-row gap-6 justify-center">
+        <a href="#journey" class="px-10 py-5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl text-lg transition">
+          See My Journey →
+        </a>
+        <a href="#contact" class="px-10 py-5 border-2 border-emerald-600 hover:bg-emerald-950/50 rounded-xl text-lg transition">
+          Let's Talk
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 px-6">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <div class="aspect-square max-w-md mx-auto rounded-2xl overflow-hidden border-4 border-emerald-800/40 bg-zinc-900">
+          <!-- Replace with your photo -->
+          <img src="ut.jpeg" alt="Utshab" class="w-full h-full object-cover">
+        </div>
+      </div>
+      <div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">Aspiring Ethical Hacker</h2>
+        <p class="text-lg text-zinc-300 leading-relaxed mb-6">
+          I'm a 1st semester BCA student who is just starting the journey.<br><br>
+          Right now I'm focused on learning <strong>HTML, CSS, JavaScript & Tailwind</strong> — this website is one of my first real projects.<br><br>
+          But my big dream is <strong>cybersecurity & ethical hacking</strong>. I have zero real skills in hacking yet — but I'm very serious about starting soon.
+        </p>
+        <div class="flex gap-10 text-center">
+          <div>
+            <div class="text-4xl font-bold neon-green">1</div>
+            <div class="text-sm text-zinc-500">Semester</div>
+          </div>
+          <div>
+            <div class="text-4xl font-bold neon-green">0</div>
+            <div class="text-sm text-zinc-500">Cyber certs (yet)</div>
+          </div>
+          <div>
+            <div class="text-4xl font-bold neon-green">100%</div>
+            <div class="text-sm text-zinc-500">Motivation</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-20 px-6 bg-zinc-900">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">What I'm Learning Right Now</h2>
+      
+      <div class="grid md:grid-cols-2 gap-10">
+        <!-- Web Dev -->
+        <div class="bg-zinc-950 border border-emerald-800/40 p-10 rounded-2xl">
+          <div class="flex items-center gap-4 mb-8">
+            <i class="fas fa-code text-5xl text-sky-400"></i>
+            <h3 class="text-3xl font-bold">Web Development</h3>
+          </div>
+          <div class="grid grid-cols-2 gap-6 text-center">
+            <div><i class="fab fa-html5 text-6xl text-orange-500 mb-3"></i><p>HTML5</p></div>
+            <div><i class="fab fa-css3-alt text-6xl text-blue-500 mb-3"></i><p>CSS3</p></div>
+            <div><i class="fab fa-js text-6xl text-yellow-400 mb-3"></i><p>JavaScript</p></div>
+            <div><i class="fas fa-wind text-6xl text-cyan-400 mb-3"></i><p>Tailwind CSS</p></div>
+          </div>
+        </div>
+
+        <!-- Cybersecurity (future) -->
+        <div class="bg-zinc-950 border border-amber-800/40 p-10 rounded-2xl relative">
+          <div class="absolute -top-4 right-8 bg-amber-600 text-white text-xs font-bold px-4 py-1 rounded-full">STARTING SOON</div>
+          <div class="flex items-center gap-4 mb-8">
+            <i class="fas fa-shield-halved text-5xl text-emerald-400"></i>
+            <h3 class="text-3xl font-bold">Cybersecurity</h3>
+          </div>
+          <div class="space-y-6 text-zinc-300">
+            <div class="flex items-center gap-4"><i class="fas fa-terminal w-8"></i>Kali Linux basics</div>
+            <div class="flex items-center gap-4"><i class="fas fa-magnifying-glass w-8"></i>Nmap & Wireshark</div>
+            <div class="flex items-center gap-4"><i class="fas fa-bug w-8"></i>Web vulnerabilities (OWASP)</div>
+            <div class="flex items-center gap-4"><i class="fab fa-python w-8"></i>Python for security scripts</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey -->
+  <section id="journey" class="py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-10">My Cybersecurity Journey</h2>
+      <p class="text-xl text-zinc-400 mb-12">Honest roadmap — no fake skills here</p>
+      
+      <div class="bg-zinc-900 border border-dashed border-emerald-800/50 rounded-2xl p-10 max-w-3xl mx-auto text-left space-y-8 text-lg">
+        <div class="flex gap-6"><span class="text-emerald-400 font-mono w-10">01</span>Master web development fundamentals</div>
+        <div class="flex gap-6"><span class="text-emerald-400 font-mono w-10">02</span>Start free ethical hacking courses (YouTube / TryHackMe)</div>
+        <div class="flex gap-6"><span class="text-emerald-400 font-mono w-10">03</span>Install Kali Linux & learn basic tools</div>
+        <div class="flex gap-6"><span class="text-emerald-400 font-mono w-10">04</span>Build first mini security projects</div>
+        <div class="flex gap-6"><span class="text-emerald-400 font-mono w-10">05</span>Participate in CTFs & aim for Security+ / CEH later</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20 px-6 bg-zinc-900">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-6">My Projects</h2>
+      <p class="text-center text-zinc-400 mb-12">Still very early — more coming soon!</p>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-zinc-950 border border-emerald-800/40 rounded-2xl overflow-hidden">
+          <div class="h-48 bg-zinc-800 flex items-center justify-center">
+            <p class="text-emerald-400 text-xl">This Portfolio</p>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Personal Portfolio v1</h3>
+            <p class="text-zinc-400 text-sm">Built while learning HTML + Tailwind</p>
+          </div>
+        </div>
+
+        <div class="bg-zinc-950 border border-amber-800/40 rounded-2xl overflow-hidden opacity-70">
+          <div class="h-48 bg-zinc-800 flex items-center justify-center">
+            <i class="fas fa-shield-halved text-6xl text-amber-500"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-amber-400 mb-2">Coming Soon</h3>
+            <p class="text-zinc-400 text-sm">Password strength checker</p>
+          </div>
+        </div>
+
+        <div class="bg-zinc-950 border border-amber-800/40 rounded-2xl overflow-hidden opacity-70">
+          <div class="h-48 bg-zinc-800 flex items-center justify-center">
+            <i class="fas fa-bug text-6xl text-amber-500"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-amber-400 mb-2">Coming Soon</h3>
+            <p class="text-zinc-400 text-sm">Basic vulnerability demo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 px-6">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-8">Let's Connect</h2>
+      <p class="text-xl text-zinc-400 mb-12">Beginner or pro — feel free to message about web dev, hacking roadmaps, or anything!</p>
+
+      <form class="space-y-6">
+        <input type="text" placeholder="Your name" class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-6 py-5 focus:border-emerald-500 outline-none">
+        <input type="email" placeholder="Email address" class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-6 py-5 focus:border-emerald-500 outline-none">
+        <textarea placeholder="Message..." rows="5" class="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-6 py-5 focus:border-emerald-500 outline-none"></textarea>
+        <button type="button" onclick="alert('Thanks! (this is demo — in real site use Formspree / Netlify Forms)')" class="w-full py-6 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl text-lg transition">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer with socials -->
+  <footer class="py-12 bg-black border-t border-zinc-800 text-center">
+    <div class="flex justify-center gap-10 text-4xl mb-6">
+      <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME/" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:your.email@example.com" class="hover:text-emerald-400 transition"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p class="text-zinc-500">© 2026 Utshab • Made with passion while learning</p>
+  </footer>
+
+  <!-- Mobile menu toggle -->
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+      btn.innerHTML = menu.classList.contains('hidden') 
+        ? '<i class="fas fa-bars"></i>' 
+        : '<i class="fas fa-times"></i>';
+    });
+
+    // Typing animation
+    const phrases = [
+      "BCA 1st Semester Student",
+      "Learning Web Development",
+      "Future Ethical Hacker",
+      "Cybersecurity Enthusiast"
+    ];
+    let i = 0, j = 0, forward = true;
+    const el = document.getElementById('typing');
+
+    function type() {
+      const word = phrases[i];
+      if (forward) {
+        if (j <= word.length) {
+          el.textContent = word.substring(0, j++);
+          setTimeout(type, 80);
+        } else {
+          forward = false;
+          setTimeout(type, 1500);
+        }
+      } else {
+        if (j >= 0) {
+          el.textContent = word.substring(0, j--);
+          setTimeout(type, 40);
+        } else {
+          forward = true;
+          i = (i + 1) % phrases.length;
+          setTimeout(type, 300);
+        }
+      }
+    }
+    setTimeout(type, 800);
+  </script>
+
+</body>
+</html>
